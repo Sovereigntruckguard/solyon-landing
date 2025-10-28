@@ -20,7 +20,11 @@ export default function Home() {
           <Image src="/solyon-logo.png" alt="SOLYON" width={28} height={28} className="logo-img" />
           <span className="brand-text">SOLYON</span>
         </div>
-        <a className="cta ghost" href="#ecosistema">Explorar ecosistema</a>
+        <nav style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+          {/* Enlace directo a Arcanum (sin archivos adicionales) */}
+          <a className="cta ghost" href="https://arcanum.sovereigntruckguard.com">Arcanum</a>
+          <a className="cta ghost" href="#ecosistema">Explorar ecosistema</a>
+        </nav>
       </header>
 
       {/* HERO con LOGO CENTRADO */}
@@ -64,11 +68,17 @@ export default function Home() {
             title="Arcanum AI"
             desc={
               <>
-                <p>Motor cognitivo con <b>memoria fractal</b> y fórmula anti-alucinación para respuestas fiables.</p>
+                <p>
+                  Motor cognitivo con <b>memoria fractal</b> y fórmula <b>anti-alucinación</b> para respuestas
+                  consistentes y auditables.
+                </p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> acceso a IA confiable para pymes latinas; reducción de sesgos y errores críticos.</li>
-                  <li><b>Beneficio:</b> decisiones más seguras en salud, educación y finanzas.</li>
+                  <li><b>Impacto social:</b> acceso a IA confiable para pymes y equipos educativos en LATAM.</li>
+                  <li><b>Beneficio:</b> decisiones más seguras en salud, educación, finanzas y gobierno.</li>
                 </ul>
+                <div className="actions" style={{ justifyContent: "flex-start" }}>
+                  <a className="cta ghost" href="https://arcanum.sovereigntruckguard.com">Entrar a Arcanum →</a>
+                </div>
               </>
             }
           />
@@ -76,10 +86,13 @@ export default function Home() {
             title="Nexus"
             desc={
               <>
-                <p>Orquestador de agentes que <b>automatiza flujos</b>, tareas y datos en tiempo real.</p>
+                <p>
+                  Orquestador de agentes que <b>automatiza flujos</b>, integra datos y activa <b>operaciones
+                  autónomas</b>.
+                </p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> productividad para equipos pequeños; menos tareas repetitivas, más tiempo humano.</li>
-                  <li><b>Beneficio:</b> competitividad de emprendimientos y empleo de calidad.</li>
+                  <li><b>Impacto social:</b> productividad para equipos pequeños; menos tareas repetitivas.</li>
+                  <li><b>Beneficio:</b> competitividad, reducción de costos y mejor calidad de servicio.</li>
                 </ul>
               </>
             }
@@ -88,10 +101,12 @@ export default function Home() {
             title="Sovereign TruckGuard / TruckBoss"
             desc={
               <>
-                <p>Insurtech de lujo con cotización precisa y educación financiera para camioneros.</p>
+                <p>
+                  Insurtech de lujo con cotización precisa, <b>inclusión financiera</b> y educación para camioneros.
+                </p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> seguridad vial y <b>inclusión financiera</b> del camionero latino en EE. UU.</li>
-                  <li><b>Beneficio:</b> pólizas justas, menos fraudes, operación más segura.</li>
+                  <li><b>Impacto social:</b> seguridad vial y formalización del camionero latino en EE. UU.</li>
+                  <li><b>Beneficio:</b> pólizas justas, menos fraude y operación más segura.</li>
                 </ul>
               </>
             }
@@ -100,10 +115,12 @@ export default function Home() {
             title="EL-VIA DOT Express"
             desc={
               <>
-                <p>Plataforma <b>bilingüe</b> para cumplimiento DOT y aprendizaje acelerado.</p>
+                <p>
+                  Plataforma <b>bilingüe</b> para cumplimiento DOT y aprendizaje acelerado con IA.
+                </p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> movilidad laboral, mejores ingresos y reducción de sanciones por desconocimiento.</li>
-                  <li><b>Beneficio:</b> formalización de operadores y familias más estables.</li>
+                  <li><b>Impacto social:</b> movilidad laboral, mejores ingresos y menos sanciones.</li>
+                  <li><b>Beneficio:</b> familias más estables y rutas de ascenso real.</li>
                 </ul>
               </>
             }
@@ -112,10 +129,12 @@ export default function Home() {
             title="Vita & Coevolution"
             desc={
               <>
-                <p>Programa de <b>transformación humana</b> y bienestar cognitivo (hábitos, adicciones, foco).</p>
+                <p>
+                  Programa de <b>transformación humana</b> (hábitos, adicciones, foco) con acompañamiento cognitivo.
+                </p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> salud mental accesible; resiliencia y propósito en comunidades vulnerables.</li>
-                  <li><b>Beneficio:</b> vidas más estables, mejor desempeño y reducción de violencia.</li>
+                  <li><b>Impacto social:</b> salud mental accesible y resiliencia en comunidades vulnerables.</li>
+                  <li><b>Beneficio:</b> mejor desempeño, menos violencia y mayor bienestar.</li>
                 </ul>
               </>
             }
@@ -124,10 +143,12 @@ export default function Home() {
             title="Foundation"
             desc={
               <>
-                <p>Fundación y <b>Escuela de Pensamiento</b> para becas, talleres y transferencia de conocimiento.</p>
+                <p>
+                  Fundación y <b>Escuela de Pensamiento</b> para becas, talleres y transferencia de conocimiento.
+                </p>
                 <ul className="impact">
                   <li><b>Impacto social:</b> educación de alta calidad en barrios y rutas de empleabilidad.</li>
-                  <li><b>Beneficio:</b> movilidad social y tejido comunitario más fuerte.</li>
+                  <li><b>Beneficio:</b> movilidad social y tejido comunitario fortalecido.</li>
                 </ul>
               </>
             }
