@@ -18,6 +18,13 @@ html,body{padding:0;margin:0;background:var(--black);color:var(--white);font-fam
   border-radius:8px;font-weight:800;box-shadow:0 0 0 1px #000 inset, 0 6px 24px #000;}
 .brand-text{font-family:Montserrat,system-ui;font-weight:800;font-size:18px}
 
+/* === NUEVO: Logo real en navbar cuando se use <Image class="logo-img" /> === */
+.logo-img{
+  width:28px;height:28px;border-radius:8px;object-fit:contain;
+  box-shadow:0 0 0 1px #000 inset, 0 6px 24px #000;
+  background:transparent;
+}
+
 .hero{width:100%;max-width:1200px;margin:40px auto 0;padding:40px 24px 24px;text-align:center;}
 .title{font-family:Montserrat,system-ui;font-weight:800;letter-spacing:.02em;font-size:48px;line-height:1.05;margin:0 auto 10px;max-width:900px;}
 .rg{background:linear-gradient(125deg,#FFDDE4 0%, var(--rg) 40%, #8E545C 85%, #F1C7CE 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 1px rgba(0,0,0,.35);}
@@ -28,6 +35,11 @@ html,body{padding:0;margin:0;background:var(--black);color:var(--white);font-fam
 .cta.ghost{color:var(--rg-soft);background:transparent;}
 .cta:hover{transform:translateY(-1px);filter:saturate(1.05)}
 
+/* === NUEVO: Logo grande centrado en el hero === */
+.hero-logo-wrap{display:grid;place-items:center;margin-bottom:10px}
+.hero-logo{filter:drop-shadow(0 18px 60px rgba(0,0,0,.45));width:auto;height:auto;max-width:240px}
+
+/* Secciones */
 .section{width:100%;max-width:1200px;margin:24px auto;padding:24px}
 .h2{font-family:Montserrat,system-ui;font-weight:700;font-size:24px;margin:0 0 10px;color:var(--rg-soft);letter-spacing:.06em;text-transform:uppercase;}
 .p{color:#DCDCDC;max-width:900px}
@@ -38,8 +50,20 @@ html,body{padding:0;margin:0;background:var(--black);color:var(--white);font-fam
 .card-desc{position:relative;z-index:1;color:#CFCFCF;line-height:1.55}
 .card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.45)}
 
+/* === NUEVO: listas de impacto dentro de las tarjetas === */
+.impact{margin:10px 0 0 18px;padding:0;color:#CFCFCF}
+.impact li{margin:6px 0}
+
+/* Contacto */
 .contact .contact-box{border:1px solid #232323;border-radius:18px;padding:22px;background:#111;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;}
 .label{color:var(--muted);text-transform:uppercase;font-size:12px;letter-spacing:.16em;margin-bottom:6px}
 .link{color:var(--rg-soft);text-decoration:none}
 .link:hover{text-decoration:underline}
 .note{color:#BEBEBE;font-size:12px}
+
+/* === NUEVO: pequeños ajustes responsive === */
+@media (max-width: 640px){
+  .title{font-size:36px}
+  .hero-logo{max-width:180px}
+  .nav{padding:16px}
+}
