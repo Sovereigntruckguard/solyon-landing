@@ -41,6 +41,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NUEVA SECCIÓN DE LOGOS DEL ECOSISTEMA */}
+      <section id="logos-ecosistema" className="ecosistema">
+        <h2 className="ecosistema__title">Ecosistema SOLYON</h2>
+
+        <div className="ecosistema__grid">
+          <article className="ecosistema__item">
+            <div className="ecosistema__logoWrap">
+              <Image
+                src="/solyon-arcanum.png"
+                alt="SOLYON Arcanum — Inteligencia central"
+                width={420}
+                height={420}
+                priority
+                className="ecosistema__img"
+              />
+            </div>
+            <h3 className="ecosistema__name">SOLYON ARCANUM</h3>
+            <p className="ecosistema__desc">Inteligencia central</p>
+          </article>
+
+          <article className="ecosistema__item">
+            <div className="ecosistema__logoWrap">
+              <Image
+                src="/solyon-nexus.png"
+                alt="SOLYON Nexus — Sistema nervioso"
+                width={420}
+                height={420}
+                className="ecosistema__img"
+              />
+            </div>
+            <h3 className="ecosistema__name">SOLYON NEXUS</h3>
+            <p className="ecosistema__desc">Sistema nervioso</p>
+          </article>
+
+          <article className="ecosistema__item">
+            <div className="ecosistema__logoWrap">
+              <Image
+                src="/el-via.png"
+                alt="EL-VÍA — Camino humano"
+                width={420}
+                height={420}
+                className="ecosistema__img"
+              />
+            </div>
+            <h3 className="ecosistema__name">EL-VÍA</h3>
+            <p className="ecosistema__desc">Camino humano</p>
+          </article>
+        </div>
+      </section>
+
       {/* IDENTIDAD / MISIÓN / VISIÓN / VALORES */}
       <section className="section identity" id="identidad">
         <h2 className="h2">Identidad</h2>

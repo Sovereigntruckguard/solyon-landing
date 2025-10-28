@@ -7,24 +7,26 @@
   --muted:#A9A9A9;
   --card:#131313;
 }
+
 *{box-sizing:border-box}
 html,body{padding:0;margin:0;background:var(--black);color:var(--white);font-family:Lato,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
 .page{min-height:100dvh;display:flex;flex-direction:column}
 
+/* NAV */
 .nav{width:100%;max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;gap:.6rem;letter-spacing:.18em}
 .logo{width:28px;height:28px;display:inline-grid;place-items:center;color:var(--black);
   background:radial-gradient(120% 120% at 20% 20%, #FFDDE4 0%, var(--rg) 40%, #8E545C 100%);
   border-radius:8px;font-weight:800;box-shadow:0 0 0 1px #000 inset, 0 6px 24px #000;}
 .brand-text{font-family:Montserrat,system-ui;font-weight:800;font-size:18px}
-
-/* === NUEVO: Logo real en navbar cuando se use <Image class="logo-img" /> === */
+/* Logo real en navbar cuando se use <Image class="logo-img" /> */
 .logo-img{
   width:28px;height:28px;border-radius:8px;object-fit:contain;
   box-shadow:0 0 0 1px #000 inset, 0 6px 24px #000;
   background:transparent;
 }
 
+/* HERO */
 .hero{width:100%;max-width:1200px;margin:40px auto 0;padding:40px 24px 24px;text-align:center;}
 .title{font-family:Montserrat,system-ui;font-weight:800;letter-spacing:.02em;font-size:48px;line-height:1.05;margin:0 auto 10px;max-width:900px;}
 .rg{background:linear-gradient(125deg,#FFDDE4 0%, var(--rg) 40%, #8E545C 85%, #F1C7CE 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 1px rgba(0,0,0,.35);}
@@ -34,25 +36,93 @@ html,body{padding:0;margin:0;background:var(--black);color:var(--white);font-fam
 .cta.solid{background:linear-gradient(135deg,#FFDDE4 0%, var(--rg) 55%, #8E545C 100%);color:var(--black);border:none;box-shadow:0 10px 30px rgba(183,110,121,.35);}
 .cta.ghost{color:var(--rg-soft);background:transparent;}
 .cta:hover{transform:translateY(-1px);filter:saturate(1.05)}
-
-/* === NUEVO: Logo grande centrado en el hero === */
+/* Logo grande centrado en el hero */
 .hero-logo-wrap{display:grid;place-items:center;margin-bottom:10px}
 .hero-logo{filter:drop-shadow(0 18px 60px rgba(0,0,0,.45));width:auto;height:auto;max-width:240px}
 
-/* Secciones */
+/* Secciones base */
 .section{width:100%;max-width:1200px;margin:24px auto;padding:24px}
 .h2{font-family:Montserrat,system-ui;font-weight:700;font-size:24px;margin:0 0 10px;color:var(--rg-soft);letter-spacing:.06em;text-transform:uppercase;}
 .p{color:#DCDCDC;max-width:900px}
+
+/* Grid de tarjetas */
 .grid .cards{margin-top:14px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
 .card{background:linear-gradient(180deg,var(--card),#0E0E0E);border:1px solid #242424;border-radius:16px;padding:16px;min-height:148px;transition:.25s ease;position:relative;overflow:hidden;}
 .card:before{content:"";position:absolute;inset:-1px;background:radial-gradient(600px 200px at -10% -20%, rgba(183,110,121,.25), transparent 60%);z-index:0;pointer-events:none;}
 .card-title{position:relative;z-index:1;font-weight:700;margin:2px 0 8px}
 .card-desc{position:relative;z-index:1;color:#CFCFCF;line-height:1.55}
 .card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.45)}
-
-/* === NUEVO: listas de impacto dentro de las tarjetas === */
+/* listas de impacto dentro de las tarjetas */
 .impact{margin:10px 0 0 18px;padding:0;color:#CFCFCF}
 .impact li{margin:6px 0}
+
+/* === Sección Logos del Ecosistema (Arcanum / Nexus / EL-VÍA) === */
+.ecosistema{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:72px 20px;
+}
+.ecosistema__title{
+  font-family:Montserrat,system-ui;
+  font-weight:700;
+  font-size:clamp(24px,2.4vw,36px);
+  letter-spacing:.12em;
+  margin:0 0 48px;
+  text-transform:uppercase;
+  color:var(--rg-soft);
+}
+.ecosistema__grid{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  gap:40px;
+  grid-template-columns:repeat(3,minmax(220px,1fr));
+}
+@media (max-width: 960px){
+  .ecosistema__grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width: 640px){
+  .ecosistema__grid{grid-template-columns:1fr;}
+}
+.ecosistema__item{
+  display:grid;
+  justify-items:center;
+  gap:12px;
+}
+.ecosistema__logoWrap{
+  width:min(320px,90%);
+  aspect-ratio:1/1;
+  margin-inline:auto;
+  display:grid;
+  place-items:center;
+  transition:transform .25s ease, filter .25s ease;
+  /* halo en oro rosado suave */
+  filter:drop-shadow(0 0 10px rgba(234,192,199,.25));
+}
+.ecosistema__img{
+  width:100%;
+  height:auto;
+}
+.ecosistema__item:hover .ecosistema__logoWrap{
+  transform:translateY(-6px);
+  filter:drop-shadow(0 0 16px rgba(234,192,199,.45));
+}
+.ecosistema__name{
+  font-family:Montserrat,system-ui;
+  font-weight:700;
+  font-size:16px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin:6px 0 0;
+  color:#F1C7CE; /* metálico suave */
+}
+.ecosistema__desc{
+  opacity:.88;
+  margin:0;
+  font-weight:300;
+  color:#D9D9D9;
+}
 
 /* Contacto */
 .contact .contact-box{border:1px solid #232323;border-radius:18px;padding:22px;background:#111;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;}
@@ -61,7 +131,7 @@ html,body{padding:0;margin:0;background:var(--black);color:var(--white);font-fam
 .link:hover{text-decoration:underline}
 .note{color:#BEBEBE;font-size:12px}
 
-/* === NUEVO: pequeños ajustes responsive === */
+/* Responsive tweaks */
 @media (max-width: 640px){
   .title{font-size:36px}
   .hero-logo{max-width:180px}
