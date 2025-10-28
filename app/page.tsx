@@ -21,27 +21,17 @@ export default function Home() {
           <span className="brand-text">SOLYON</span>
         </div>
         <nav style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-          {/* Enlace directo a Arcanum (sin archivos adicionales) */}
           <a className="cta ghost" href="https://arcanum.sovereigntruckguard.com">Arcanum</a>
           <a className="cta ghost" href="#ecosistema">Explorar ecosistema</a>
         </nav>
       </header>
 
-      {/* HERO con LOGO CENTRADO */}
+      {/* HERO */}
       <section className="hero">
         <div className="hero-logo-wrap">
-          <Image
-            src="/solyon-logo.png"
-            alt="Logo SOLYON"
-            width={220}
-            height={220}
-            priority
-            className="hero-logo"
-          />
+          <Image src="/solyon-logo.png" alt="Logo SOLYON" width={220} height={220} priority className="hero-logo" />
         </div>
-        <h1 className="title">
-          <span className="rg">Luxury from Consciousness</span>
-        </h1>
+        <h1 className="title"><span className="rg">Luxury from Consciousness</span></h1>
         <p className="subtitle">
           Innovación, inteligencia y propósito humano. Ecosistema cognitivo soberano desde Colombia para el mundo.
         </p>
@@ -51,13 +41,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* IDENTIDAD */}
-      <section className="section identity">
+      {/* IDENTIDAD / MISIÓN / VISIÓN / VALORES */}
+      <section className="section identity" id="identidad">
         <h2 className="h2">Identidad</h2>
         <p className="p">
-          SOLYON Technologies integra <b>IA cognitiva</b>, <b>orquestación autónoma</b> y <b>transformación humana</b>.
-          Diseñamos tecnologías con alma, precisión y estética de lujo.
+          SOLYON Technologies nace como un <b>ecosistema cognitivo</b> que une la inteligencia artificial con la conciencia humana.
+          Nuestra esencia está en convertir el conocimiento en evolución y la tecnología en una extensión del alma.
         </p>
+
+        <div style={{marginTop:"24px",display:"grid",gap:"18px"}}>
+          <div>
+            <h3 className="h2" style={{fontSize:"20px",marginBottom:"6px"}}>Misión</h3>
+            <p className="p">
+              Desarrollar tecnologías soberanas que impulsen la evolución humana, social y empresarial,
+              integrando <b>IA cognitiva</b>, <b>educación transformadora</b> y <b>propósito consciente</b> para crear impacto real y duradero.
+            </p>
+          </div>
+          <div>
+            <h3 className="h2" style={{fontSize:"20px",marginBottom:"6px"}}>Visión</h3>
+            <p className="p">
+              Convertirnos en el referente global de innovación con propósito, liderando una nueva era donde la
+              <b>tecnología tenga alma</b> y la conciencia se convierta en el motor de la inteligencia artificial.
+              En 2030, seremos el ecosistema latinoamericano más influyente en IA humana y transformación cognitiva.
+            </p>
+          </div>
+          <div>
+            <h3 className="h2" style={{fontSize:"20px",marginBottom:"6px"}}>Valores</h3>
+            <ul className="impact">
+              <li><b>Soberanía:</b> independencia tecnológica y libertad intelectual.</li>
+              <li><b>Conciencia:</b> decisiones guiadas por propósito, no por reacción.</li>
+              <li><b>Innovación con alma:</b> cada avance debe elevar al ser humano.</li>
+              <li><b>Excelencia:</b> precisión, estética y profundidad en cada creación.</li>
+              <li><b>Impacto social:</b> tecnología que genera oportunidades, educación y bienestar real.</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       {/* ECOSISTEMA */}
@@ -68,15 +86,12 @@ export default function Home() {
             title="Arcanum AI"
             desc={
               <>
-                <p>
-                  Motor cognitivo con <b>memoria fractal</b> y fórmula <b>anti-alucinación</b> para respuestas
-                  consistentes y auditables.
-                </p>
+                <p>Motor cognitivo con <b>memoria fractal</b> y fórmula <b>anti-alucinación</b> para respuestas confiables y auditables.</p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> acceso a IA confiable para pymes y equipos educativos en LATAM.</li>
-                  <li><b>Beneficio:</b> decisiones más seguras en salud, educación, finanzas y gobierno.</li>
+                  <li><b>Impacto social:</b> acceso a IA ética y transparente para pymes y comunidades educativas.</li>
+                  <li><b>Beneficio:</b> decisiones más seguras en sectores sensibles.</li>
                 </ul>
-                <div className="actions" style={{ justifyContent: "flex-start" }}>
+                <div className="actions" style={{justifyContent:"flex-start"}}>
                   <a className="cta ghost" href="https://arcanum.sovereigntruckguard.com">Entrar a Arcanum →</a>
                 </div>
               </>
@@ -86,13 +101,10 @@ export default function Home() {
             title="Nexus"
             desc={
               <>
-                <p>
-                  Orquestador de agentes que <b>automatiza flujos</b>, integra datos y activa <b>operaciones
-                  autónomas</b>.
-                </p>
+                <p>Orquestador de agentes que <b>automatiza flujos</b>, conecta áreas y reduce fricción operativa.</p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> productividad para equipos pequeños; menos tareas repetitivas.</li>
-                  <li><b>Beneficio:</b> competitividad, reducción de costos y mejor calidad de servicio.</li>
+                  <li><b>Impacto social:</b> más productividad y menos agotamiento en pequeñas empresas.</li>
+                  <li><b>Beneficio:</b> organizaciones más humanas, eficientes y sostenibles.</li>
                 </ul>
               </>
             }
@@ -101,12 +113,10 @@ export default function Home() {
             title="Sovereign TruckGuard / TruckBoss"
             desc={
               <>
-                <p>
-                  Insurtech de lujo con cotización precisa, <b>inclusión financiera</b> y educación para camioneros.
-                </p>
+                <p>Insurtech de lujo con cotización precisa y <b>educación financiera</b> para el camionero latino.</p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> seguridad vial y formalización del camionero latino en EE. UU.</li>
-                  <li><b>Beneficio:</b> pólizas justas, menos fraude y operación más segura.</li>
+                  <li><b>Impacto social:</b> inclusión, seguridad vial y acceso justo a servicios financieros.</li>
+                  <li><b>Beneficio:</b> estabilidad familiar y reducción de accidentes.</li>
                 </ul>
               </>
             }
@@ -115,12 +125,10 @@ export default function Home() {
             title="EL-VIA DOT Express"
             desc={
               <>
-                <p>
-                  Plataforma <b>bilingüe</b> para cumplimiento DOT y aprendizaje acelerado con IA.
-                </p>
+                <p>Plataforma <b>bilingüe</b> para cumplimiento DOT y aprendizaje acelerado con IA.</p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> movilidad laboral, mejores ingresos y menos sanciones.</li>
-                  <li><b>Beneficio:</b> familias más estables y rutas de ascenso real.</li>
+                  <li><b>Impacto social:</b> más empleabilidad y dignificación del trabajo del conductor.</li>
+                  <li><b>Beneficio:</b> movilidad social y reducción de barreras idiomáticas.</li>
                 </ul>
               </>
             }
@@ -129,12 +137,10 @@ export default function Home() {
             title="Vita & Coevolution"
             desc={
               <>
-                <p>
-                  Programa de <b>transformación humana</b> (hábitos, adicciones, foco) con acompañamiento cognitivo.
-                </p>
+                <p>Programa de <b>transformación humana</b> y bienestar cognitivo basado en neuroplasticidad y hábitos conscientes.</p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> salud mental accesible y resiliencia en comunidades vulnerables.</li>
-                  <li><b>Beneficio:</b> mejor desempeño, menos violencia y mayor bienestar.</li>
+                  <li><b>Impacto social:</b> salud mental accesible y prevención de adicciones.</li>
+                  <li><b>Beneficio:</b> personas más equilibradas y productivas.</li>
                 </ul>
               </>
             }
@@ -143,12 +149,10 @@ export default function Home() {
             title="Foundation"
             desc={
               <>
-                <p>
-                  Fundación y <b>Escuela de Pensamiento</b> para becas, talleres y transferencia de conocimiento.
-                </p>
+                <p>Fundación y <b>Escuela de Pensamiento</b> para formación, becas y proyectos comunitarios.</p>
                 <ul className="impact">
-                  <li><b>Impacto social:</b> educación de alta calidad en barrios y rutas de empleabilidad.</li>
-                  <li><b>Beneficio:</b> movilidad social y tejido comunitario fortalecido.</li>
+                  <li><b>Impacto social:</b> educación gratuita y desarrollo de talento en comunidades vulnerables.</li>
+                  <li><b>Beneficio:</b> equidad y empoderamiento social.</li>
                 </ul>
               </>
             }
