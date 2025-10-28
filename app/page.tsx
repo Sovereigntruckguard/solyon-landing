@@ -46,13 +46,14 @@ export default function Home() {
         <h2 className="ecosistema__title">Ecosistema SOLYON</h2>
 
         <div className="ecosistema__grid">
-          <article className="ecosistema__item">
+          {/* Arcanum trae texto dentro del PNG → ocultamos títulos con has-text-in-logo */}
+          <article className="ecosistema__item has-text-in-logo">
             <div className="ecosistema__logoWrap">
               <Image
                 src="/solyon-arcanum.png"
                 alt="SOLYON Arcanum — Inteligencia central"
-                width={220}
-                height={220}
+                width={180}
+                height={180}
                 priority
                 className="ecosistema__img"
               />
@@ -66,8 +67,8 @@ export default function Home() {
               <Image
                 src="/solyon-nexus.png"
                 alt="SOLYON Nexus — Sistema nervioso"
-                width={220}
-                height={220}
+                width={180}
+                height={180}
                 className="ecosistema__img"
               />
             </div>
@@ -80,8 +81,8 @@ export default function Home() {
               <Image
                 src="/solyon-vita.png"
                 alt="Vita — Transformación humana"
-                width={220}
-                height={220}
+                width={180}
+                height={180}
                 className="ecosistema__img"
               />
             </div>
@@ -94,8 +95,8 @@ export default function Home() {
               <Image
                 src="/solyon-foundation.png"
                 alt="SOLYON Foundation — Fundación y Escuela de Pensamiento"
-                width={220}
-                height={220}
+                width={180}
+                height={180}
                 className="ecosistema__img"
               />
             </div>
@@ -103,13 +104,14 @@ export default function Home() {
             <p className="ecosistema__desc">Fundación · Escuela de Pensamiento</p>
           </article>
 
-          <article className="ecosistema__item">
+          {/* EL-VÍA también trae texto en el PNG → ocultamos títulos */}
+          <article className="ecosistema__item has-text-in-logo">
             <div className="ecosistema__logoWrap">
               <Image
                 src="/el-via.png"
                 alt="EL-VÍA — Camino humano"
-                width={220}
-                height={220}
+                width={180}
+                height={180}
                 className="ecosistema__img"
               />
             </div>
