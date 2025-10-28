@@ -48,7 +48,9 @@ html,body{padding:0;margin:0;background:var(--black);color:var(--white);font-fam
 .impact{margin:10px 0 0 18px;padding:0;color:#CFCFCF}
 .impact li{margin:6px 0}
 
-/* Logos del ecosistema */
+/* ============================= */
+/* Logos del ecosistema (ajuste) */
+/* ============================= */
 .ecosistema{
   background:#000;
   color:#fff;
@@ -64,35 +66,47 @@ html,body{padding:0;margin:0;background:var(--black);color:var(--white);font-fam
   text-transform:uppercase;
   color:var(--rg-soft);
 }
-/* auto-fit para que 5 items fluyan bonitos (3-2-1 según viewport) */
+
+/* Grid más proporcionado: 4-3-2-1 columnas */
 .ecosistema__grid{
-  max-width:1200px;
+  max-width:1280px;
   margin:0 auto;
   display:grid;
-  gap:40px;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:28px 36px;
+  grid-template-columns:repeat(4,1fr);
 }
-@media (max-width: 960px){
-  .ecosistema__grid{gap:32px;}
+@media (max-width:1200px){
+  .ecosistema__grid{grid-template-columns:repeat(3,1fr);}
 }
-@media (max-width: 640px){
-  .ecosistema__grid{gap:28px;}
+@media (max-width:900px){
+  .ecosistema__grid{grid-template-columns:repeat(2,1fr);}
 }
+@media (max-width:560px){
+  .ecosistema__grid{grid-template-columns:1fr;}
+}
+
 .ecosistema__item{
   display:grid;
   justify-items:center;
-  gap:12px;
+  gap:8px;
 }
+
+/* Logos más pequeños y consistentes */
 .ecosistema__logoWrap{
-  width:min(320px,90%);
-  aspect-ratio:1/1;
+  width:220px;
+  height:220px;          /* caja fija para alinear verticalmente */
   margin-inline:auto;
   display:grid;
   place-items:center;
   transition:transform .25s ease, filter .25s ease;
-  filter:drop-shadow(0 0 10px rgba(234,192,199,.25));
+  filter:drop-shadow(0 0 10px rgba(234,192,199,.22));
 }
-.ecosistema__img{width:100%;height:auto;}
+.ecosistema__img{
+  width:100%;
+  height:auto;
+  max-width:200px;       /* evita que toque los bordes de la caja */
+}
+
 .ecosistema__item:hover .ecosistema__logoWrap{
   transform:translateY(-6px);
   filter:drop-shadow(0 0 16px rgba(234,192,199,.45));
@@ -100,13 +114,14 @@ html,body{padding:0;margin:0;background:var(--black);color:var(--white);font-fam
 .ecosistema__name{
   font-family:Montserrat,system-ui;
   font-weight:700;
-  font-size:16px;
-  letter-spacing:.18em;
+  font-size:14px;        /* más compacto */
+  letter-spacing:.16em;
   text-transform:uppercase;
   margin:6px 0 0;
   color:#F1C7CE;
 }
 .ecosistema__desc{
+  font-size:13px;
   opacity:.88;
   margin:0;
   font-weight:300;

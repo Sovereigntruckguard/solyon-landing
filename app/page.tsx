@@ -51,8 +51,8 @@ export default function Home() {
               <Image
                 src="/solyon-arcanum.png"
                 alt="SOLYON Arcanum — Inteligencia central"
-                width={420}
-                height={420}
+                width={220}
+                height={220}
                 priority
                 className="ecosistema__img"
               />
@@ -66,8 +66,8 @@ export default function Home() {
               <Image
                 src="/solyon-nexus.png"
                 alt="SOLYON Nexus — Sistema nervioso"
-                width={420}
-                height={420}
+                width={220}
+                height={220}
                 className="ecosistema__img"
               />
             </div>
@@ -80,8 +80,8 @@ export default function Home() {
               <Image
                 src="/solyon-vita.png"
                 alt="Vita — Transformación humana"
-                width={420}
-                height={420}
+                width={220}
+                height={220}
                 className="ecosistema__img"
               />
             </div>
@@ -94,8 +94,8 @@ export default function Home() {
               <Image
                 src="/solyon-foundation.png"
                 alt="SOLYON Foundation — Fundación y Escuela de Pensamiento"
-                width={420}
-                height={420}
+                width={220}
+                height={220}
                 className="ecosistema__img"
               />
             </div>
@@ -108,8 +108,8 @@ export default function Home() {
               <Image
                 src="/el-via.png"
                 alt="EL-VÍA — Camino humano"
-                width={420}
-                height={420}
+                width={220}
+                height={220}
                 className="ecosistema__img"
               />
             </div>
