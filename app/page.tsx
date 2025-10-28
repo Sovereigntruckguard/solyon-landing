@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NUEVA SECCIÓN DE LOGOS DEL ECOSISTEMA */}
+      {/* LOGOS DEL ECOSISTEMA */}
       <section id="logos-ecosistema" className="ecosistema">
         <h2 className="ecosistema__title">Ecosistema SOLYON</h2>
 
@@ -73,6 +73,34 @@ export default function Home() {
             </div>
             <h3 className="ecosistema__name">SOLYON NEXUS</h3>
             <p className="ecosistema__desc">Sistema nervioso</p>
+          </article>
+
+          <article className="ecosistema__item">
+            <div className="ecosistema__logoWrap">
+              <Image
+                src="/solyon-vita.png"
+                alt="Vita — Transformación humana"
+                width={420}
+                height={420}
+                className="ecosistema__img"
+              />
+            </div>
+            <h3 className="ecosistema__name">VITA</h3>
+            <p className="ecosistema__desc">Transformación humana</p>
+          </article>
+
+          <article className="ecosistema__item">
+            <div className="ecosistema__logoWrap">
+              <Image
+                src="/solyon-foundation.png"
+                alt="SOLYON Foundation — Fundación y Escuela de Pensamiento"
+                width={420}
+                height={420}
+                className="ecosistema__img"
+              />
+            </div>
+            <h3 className="ecosistema__name">SOLYON FOUNDATION</h3>
+            <p className="ecosistema__desc">Fundación · Escuela de Pensamiento</p>
           </article>
 
           <article className="ecosistema__item">
@@ -128,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ECOSISTEMA */}
+      {/* ECOSISTEMA (tarjetas) */}
       <section id="ecosistema" className="section grid">
         <h2 className="h2">Ecosistema</h2>
         <div className="cards">
